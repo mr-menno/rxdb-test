@@ -6,7 +6,7 @@ addRxPlugin(RxDBQueryBuilderPlugin);
 
 // export type InitDatabase = () => Promise<RxDatabase>;
 
-export const initDatabase = async () => {
+export const initDatabase = async <RxDatabase>() => {
     const db = await createRxDatabase({
         name: 'testdb',
         storage: getRxStorageDexie(),
